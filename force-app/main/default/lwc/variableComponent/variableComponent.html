@@ -1,0 +1,20 @@
+<template>
+    <div>
+        <p> {message} </p>
+        <p> {age} </p>
+        <p> {city} </p>
+        <p> {isAdmin} </p>
+        <p> {circle.color} </p>
+        <p> {circle.radius} </p>
+        <p> {circle.type} </p>
+        <p> {persons} </p>
+        <p>
+            {person.address.city}
+        </p>
+        <p>
+        </p>
+    </div>
+    <div>
+        <lightning-button variant="brand" label="Click Me" title="Click Me" onclick={changePersonAddress}></lightning-button>
+    </div>
+</template>
