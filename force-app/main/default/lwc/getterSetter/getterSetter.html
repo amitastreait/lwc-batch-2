@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-m-around_large">
+        <p> Value is: {itemName} </p>
+        <lightning-combobox
+            name="progress"
+            label="Status"
+            placeholder="Select Char"
+            onchange={handlePicklistChange}
+            options={charOptions} >
+        </lightning-combobox>
+    </div>
+    <div class="slds-m-around_large">
+        <lightning-input type="text" variant="standard" label="Type Here" onchange={handleInputChange}></lightning-input>
+    </div>
+</template>

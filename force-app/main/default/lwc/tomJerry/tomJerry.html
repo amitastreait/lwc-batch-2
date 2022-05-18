@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-m-around_large">
+        <lightning-combobox
+            name="progress"
+            label="Status"
+            placeholder="Select Char"
+            onchange={handlePicklistChange}
+            options={charOptions} >
+        </lightning-combobox>
+    </div>
+    <div class="slds-m-around_large">
+        <lightning-button variant="brand" label="Toggle Imnage" onclick={toggeValues}></lightning-button>
+    </div>
+    <div class="slds-m-around_large">
+        <img width="300" height="300" if:true={showTomJerry} src="https://th.bing.com/th/id/R.4c6931577e0c6a2bd0de5b855887c3f9?rik=PO5KLRXykdX21A" />
+        <img width="300" height="300" if:false={showTomJerry} src="https://th.bing.com/th/id/R.f619f7a9ee75961587f9f4b15859932c?rik=fOu26EN5MHRyJw" />
+    </div>
+</template>

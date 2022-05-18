@@ -1,0 +1,14 @@
+<template>
+    <lightning-card variant="Narrow"  title="JavaScript Map Example" icon-name="standard:user">
+        <div class="slds-p-around_large">
+            <lightning-button variant="brand" label="Display Information" title="Display Information" onclick={handleClick}></lightning-button>
+        </div>
+        <div class="slds-p-around_large">
+            <template if:true={finalOutcome} for:each={finalOutcome} for:item="con" for:index="index">
+                <li key={con.key}>
+                    {con.key} &nbsp; {con.value}
+                </li>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,36 @@
+<template>
+    <!-- <div class="slds-m-around_large">
+        <template if:true={users} for:each={users} for:item="amit" for:index="index">
+            <div class="slds-p-around_small" key={amit.id}>
+                <p>{index}</p>
+                <p>{amit.first_name} &nbsp; {amit.last_name}</p>
+                <p>{amit.email}</p>
+                <img src={amit.avatar} />
+            </div>
+        </template>
+    </div> -->
+    <div class="slds-m-around_large">
+        <lightning-input onfocus={handleInputChange} onchange={handleInputChange} onkeyup={handleInputChange} type="text" value={name} variant="standard" name="Name" label="Full Name" placeholder="type here..."></lightning-input>
+    </div>
+    <div class="slds-m-around_large">
+        <lightning-button variant="brand" label="Click Me" title="Click Me" onclick={handleClick}></lightning-button>
+    </div>
+    <div class="slds-m-around_large">
+        <!--
+            0, '', undefined, null, false, NaN
+        -->
+        <template if:true={users} iterator:user={users}>
+            <div class="slds-p-around_small" key={user.value.id}>
+                <div if:true={user.first}  class="list-first"></div>
+                <p>{user.value.first_name} &nbsp;{user.value.last_name}</p>
+                <p>{user.value.email}</p>
+                <img if:true={user.value.avatar} src={user.value.avatar} />
+                <div if:true={user.last} class="list-last"></div>
+            </div>
+        </template>
+    </div>
+    <!--
+        if:True  = {}
+        if:False = {display:none}
+    -->
+</template>

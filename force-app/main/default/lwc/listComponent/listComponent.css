@@ -1,0 +1,13 @@
+body{
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: xx-large !important;
+}
+.list-first {
+    border-top: 1px solid black;
+    padding-top: 5px;
+}
+
+.list-last {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
