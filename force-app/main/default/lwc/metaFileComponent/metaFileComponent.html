@@ -1,0 +1,17 @@
+<template>
+    <lightning-quick-action-panel header="Quick Action:Meta File">
+        <div class="slds-p-horizontal_small">
+            <p>Record Id: {recordId}</p>
+            <p>Object Api Name: {objectApiName}</p>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <p> {message} </p>
+            <p> {type} </p>
+            <p> {noOfExmployee} </p>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="neutral" label="Cancel"></lightning-button>
+            <lightning-button variant="brand" label="Save" class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

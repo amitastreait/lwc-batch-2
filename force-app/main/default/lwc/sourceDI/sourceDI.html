@@ -1,0 +1,14 @@
+<template>
+    <!-- sfdcboy -->
+    <lightning-card  variant="Narrow" title="Source Component" icon-name="standard:contact">
+        <div class="slds-p-around_large">
+            <lightning-combobox
+                name="Contact"
+                label="Contact Records"
+                placeholder="Select Contacts"
+                options={options}
+                onchange={handleChange} >
+            </lightning-combobox>
+        </div>
+    </lightning-card>
+</template>

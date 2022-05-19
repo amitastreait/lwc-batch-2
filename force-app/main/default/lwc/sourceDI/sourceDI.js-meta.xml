@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+        <event name ="testevent" label ="test event" description="this is my test event">
+            <schema>
+                {
+                    "type" : "object",
+                    "properties" :{
+                        "recordId" : {
+                            "type" : "string",
+                            "title" : "Record Id",
+                            "description" : "Holds record id of contact"
+                        },
+                        "name": {
+                            "type" : "string",
+                            "title" : "Contact Name",
+                            "description" : "Holds Contact Name"
+                        }
+                    }
+                }
+            </schema>
+        </event>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <description>This component is used for describing the Meta File Working</description>
+    <masterLabel>Meta File Component</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__Tab</target>
+        <target>lightning__RecordAction</target>
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <objects>
+                <object>Account</object>
+                <object>Opportunity</object> <!-- Student - Student__c -->
+            </objects>
+            <property name="message" type="String" label="Welcome Message" default="Welcome to the Salesforce Learning Community!"
+                description="This field will contain the welcome message" required="true" />
+            <property name="type" type="String" datasource="New,Old,Existing,Partner"
+                label="Account Type" description="Account Type" />
+            <!-- <property name="currentDate" type="Date" label="Current Date"/> -->
+        </targetConfig>
+        <targetConfig targets="lightning__HomePage">
+            <property name="message" type="String" label="Welcome Message" default="Welcome to the Salesforce Learning Community!"
+                description="This field will contain the welcome message" required="true" />
+            <property name="type" type="String" datasource="New,Old,Existing,Partner"
+                label="Account Type" description="Account Type" />
+            <property name="noOfExmployee" type="Integer" label="No of Employees"/>
+            <!-- <property name="color" type="Color" label="Select color"/> -->
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

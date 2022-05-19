@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Target Component" icon-name="standard:contact">
+        <!-- sfdcboy -->
+        <div class="slds-p-around_large" if:false = {recordId}>
+            Nothing Selected
+        </div>
+        <div class="slds-p-around_large" if:true={recordId}>
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name="Contact"
+                layout-type="Compact"
+                mode="view">
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>
