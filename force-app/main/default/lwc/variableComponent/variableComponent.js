@@ -134,4 +134,13 @@ export default class VariableComponent extends LightningElement {
     }
     */
 
+    handleClick = (event) => {
+        event.preventDefault();
+        let eventTarget = event.target;
+        console.log(eventTarget);
+        console.log(eventTarget.href);
+        console.log(eventTarget.innerText);
+        console.log(eventTarget.onclick);
+    }
+
 }

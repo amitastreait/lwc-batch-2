@@ -1,0 +1,38 @@
+<apex:page showHeader="true" sidebar="false">
+
+    <apex:includeLightning />    
+    <div id="metafile" />  
+    <div id="dogApi" />   
+    <!-- the Id of div tag which will be used to render your LWC component  -->
+    <script>
+        $Lightning.use("c:lightningOutApp", function() {
+            $Lightning.createComponent("c:metaFileComponent",
+            { 
+                message   : 'Simple Message From VF Page',
+                recordId  : '001HJJu34iun34jn',
+                objectApiName : "Account",
+                type : "Classic",
+                currentDate : "2022-25-05",
+                noOfExmployee : 773,
+                color : "#RGB9024"
+            },
+            "metafile",
+            function(cmp) {
+                console.log('Calling the LWC Component');
+            });
+        });
+    </script>
+    
+    <script>
+        $Lightning.use("c:lightningOutApp", function() {
+            $Lightning.createComponent("c:dogByBreed",
+            { 
+                
+            },
+            "dogApi",
+            function(cmp) {
+                console.log('Calling the LWC Component for dogApi');
+            });
+        });
+    </script>
+</apex:page>
